@@ -1,12 +1,15 @@
 import React from 'react'
 
-export const Input = () => {
+export function Input (props:any){
   return (
-    <div>Input</div>
+   <input name={props.name} type={props.type} placeholder={props.placeholder} className='border-b border-black text-xl my-4 p-4' />
   )
 }
-export const Checkbox = () => {
+export function Checkbox (props:any) {
   return (
-    <div>Checkbox</div>
+    <div>
+    <input name={props.name} id={props.name} type='checkbox' className='mr-4'/>
+    <label htmlFor={props.name}>{props.label}</label>
+    </div>
   )
 }

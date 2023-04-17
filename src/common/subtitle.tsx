@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Subtitle = (titulo) => {
+export function Subtitle (props:any){
   return (
-    <p>{titulo}</p>
+    <p>{props.texto}</p>
   )
 }
