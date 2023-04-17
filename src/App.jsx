@@ -1,7 +1,13 @@
+import { Portada, Title } from "./components/Header"
+import { Form } from "./components/Form"
+
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline font-quentin">
-      Hello world!
-    </h1>
+    <div className="container mx-auto px-4">
+      <Portada/>
+      <Title />
+      <Form />
+
+    </div>
   )
 }
