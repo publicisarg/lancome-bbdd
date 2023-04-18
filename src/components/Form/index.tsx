@@ -7,7 +7,7 @@ export const Form = () => {
       <DatosPersonales/>
       <Subtitle texto="Me interesaría recibir información de:*" />
       <MeInteresaria/>
-      <Subtitle texto="Me interesaría recibir información de:*" />
+      <Subtitle texto="Quisiera saber de productos para:" />
 
       <QuisieraSaber/>
       <Subtitle texto="Me interesaría recibir información de:*" />
