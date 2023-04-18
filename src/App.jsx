@@ -1,5 +1,6 @@
 import { Portada, Title } from "./components/Header"
 import { Form } from "./components/Form"
+import Footer from "./components/Footer"
 
 export default function App() {
   return (
@@ -7,7 +8,7 @@ export default function App() {
       <Portada/>
       <Title />
       <Form />
-
+      <Footer />
     </div>
   )
 }

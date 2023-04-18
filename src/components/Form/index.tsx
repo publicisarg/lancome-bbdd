@@ -10,13 +10,14 @@ export const Form = () => {
       <Subtitle texto="Quisiera saber de productos para:" />
 
       <QuisieraSaber/>
-      <Subtitle texto="Me interesaría recibir información de:*" />
+      <Subtitle texto="Selecciona tu principal preocupación:*" />
 
       
       <Preocupacion/>
-      <Subtitle texto="Me interesaría recibir información de:*" />
+      <Subtitle texto="Estoy buscando:*" />
 
       <Buscando/>
+      
     
     </div>
   )
