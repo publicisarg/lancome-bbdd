@@ -2,7 +2,7 @@ import React from 'react'
 
 export function Input (props:any){
   return (
-   <input name={props.name} type={props.type} placeholder={props.placeholder} className='border-b border-black text-xl my-4 p-4' />
+   <input name={props.name} type={props.type} placeholder={props.placeholder} className='border-b border-black text-xl my-4 p-4 focus:outline-none' />
   )
 }
 export function Checkbox (props:any) {

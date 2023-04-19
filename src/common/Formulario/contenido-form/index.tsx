@@ -52,8 +52,8 @@ export const QuisieraSaber = () => {
 export const Preocupacion = () => {
     return (
         <>
-        <div class='flex'>
-            <div class='flex flex-col w-full m-4'>
+        <div className='flex'>
+            <div className='flex flex-col w-full m-4'>
                 <Checkbox name="Deshidratacion" label="Deshidratacion"  />
                 <Checkbox name="Uniformidad del tono" label="Uniformidad del tono"  />
                 <Checkbox name="Líneas finas Arrugas profundas" label="Líneas finas / Arrugas profundas" />
@@ -72,12 +72,12 @@ export const Preocupacion = () => {
 export const Buscando = () => {
     return (
         <>
-        <div class='flex'>
-            <div class='flex flex-col w-full m-4'>
+        <div className='flex'>
+            <div className='flex flex-col w-full m-4'>
             <Checkbox name="Descuentos y beneficios" label="Descuentos y beneficios"  />
             <Checkbox name="Aprender a usar los productos" label="Aprender a usar los productos"  />
             </div>
-            <div class='flex flex-col w-full m-4'>
+            <div className='flex flex-col w-full m-4'>
             <Checkbox name="Descubrir buenas reseñas" label="Descubrir buenas reseñas"  />
             <Checkbox name="AVolver a comprar" label="Volver a comprar"  />
             </div>
@@ -86,3 +86,9 @@ export const Buscando = () => {
 
     )
 }
+
+export function Boton (props: any) {
+    return (
+       <button className='py-2 px-9 bg-black hover:bg-[#FFAFBC] text-white font-bold'>{props.name}</button>
+    )
+  }

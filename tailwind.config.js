@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+
 export default {
   content: [
     "./index.html",
@@ -8,10 +10,22 @@ export default {
 
     fontFamily:{
 
-       'quentin':['quentin', 'sans-serif']
+       'quentin':['quentin', 'sans-serif'],
       
        },
-       
+
+    fontFamily:{
+      'montserat-m':['montserat-m']
+    },
+
+    fontFamily:{
+      'montserat-l':['montserat-l']
+    },
+
+    fontFamily:{
+      'montserat-l':['montserat-r']
+    },
+
     extend: {
       
     },

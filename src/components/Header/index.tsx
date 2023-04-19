@@ -17,7 +17,7 @@ export const Title = () => {
   return (
     <section className='bg-[#FFAFBC] py-9 justify-center text-center'>
        <h3 className='font-quentin text-5xl'>Bonjour</h3>
-       <p className='text-5xl'>¡QUEREMOS CONOCERTE MEJOR!</p>
+       <p className='text-5xl text-montserat-m'>¡QUEREMOS CONOCERTE MEJOR!</p>
     </section>
   )
 }
