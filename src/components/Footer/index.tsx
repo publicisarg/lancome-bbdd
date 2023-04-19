@@ -11,7 +11,7 @@ export const Footer = () => {
         </p>
         </div>
         <div className="flex justify-center"> 
-        <Checkbox name="Acepto políticas de privacidad" label="Acepto políticas de privacidad"/>
+        <Checkbox name="legal" label="Acepto políticas de privacidad"/>
         </div>
         <div className="flex text-center"> 
         <p className="text-[13px] mt-3 mb-11">
