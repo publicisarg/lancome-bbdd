@@ -9,27 +9,5 @@
      src: url(../public/font/Quentin.woff2);
     
     }
-
-@font-face {
-
-    font-family: montserat-m;
-
-    src: url(..public/font/Montserrat-Medium.woff2)
-
-}
-
-@font-face {
-
-    font-family: montserat-l;
-
-    src: url(..public/font/Montserrat-Light.woff2)
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
     
-}
-
-@font-face {
-
-    font-family: montserat-r;
-
-    src: url(..public/font/Montserrat-Regular.woff2)
-    
-}

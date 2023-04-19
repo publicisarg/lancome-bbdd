@@ -3,7 +3,7 @@ import { DatosPersonales, MeInteresaria, QuisieraSaber, Preocupacion, Buscando }
 import {Subtitle} from '../../common/subtitle'
 export const Form = () => {
   return (
-    <div className='w-[827px] m-auto '>
+    <div className='w-[827px] m-auto mt-8'>
       <DatosPersonales/>
       <Subtitle texto="Me interesaría recibir información de:*" />
       <MeInteresaria/>

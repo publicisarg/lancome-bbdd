@@ -4,7 +4,7 @@ import Footer from "./components/Footer"
 
 export default function App() {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 font-montserat">
       <Portada/>
       <Title />
       <Form />

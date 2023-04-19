@@ -11,20 +11,10 @@ export default {
     fontFamily:{
 
        'quentin':['quentin', 'sans-serif'],
-      
+       'montserrat':['Montserrat', 'sans-serif'],
        },
 
-    fontFamily:{
-      'montserat-m':['montserat-m']
-    },
-
-    fontFamily:{
-      'montserat-l':['montserat-l']
-    },
-
-    fontFamily:{
-      'montserat-l':['montserat-r']
-    },
+   
 
     extend: {
       

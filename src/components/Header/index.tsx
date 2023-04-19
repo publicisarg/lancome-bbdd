@@ -6,7 +6,7 @@ export const Portada = () => {
       <div className='bg-black py-3 flex justify-center items-center'>
         <img alt='Logo' src='/../public/img/Landing-Lancome.svg' className='w-60'/>
       </div>
-      <div className='bg-[#FFAFBC] justify-center '>
+      <div className='bg-[#FFAFBC]/50 justify-center '>
       <img alt='portada' src='/../public/img/portada.png' className='w-full'/>
       </div>
     </header>
@@ -15,9 +15,9 @@ export const Portada = () => {
 
 export const Title = () => {
   return (
-    <section className='bg-[#FFAFBC] py-9 justify-center text-center'>
+    <section className='bg-[#FFAFBC]/50 py-9 justify-center text-center'>
        <h3 className='font-quentin text-5xl'>Bonjour</h3>
-       <p className='text-5xl text-montserat-m'>¡QUEREMOS CONOCERTE MEJOR!</p>
+       <p className="text-4xl font-montserrat font-regular mt-4">¡QUEREMOS CONOCERTE MEJOR!</p>
     </section>
   )
 }
