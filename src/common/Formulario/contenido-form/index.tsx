@@ -89,6 +89,12 @@ export const Buscando = () => {
 
 export function Boton (props: any) {
     return (
-       <button className='md:py-2 py-2 md:px-9 px-16 md:text-base text-[22px] mb-14 bg-black hover:bg-[#FFAFBC] text-white font-bold'>{props.name}</button>
+       <button className='md:py-2 py-2 md:px-9 px-16 md:text-base text-[22px] mb-8 bg-black hover:bg-[#FFAFBC] text-white font-bold'>{props.name}</button>
+    )
+  }
+
+  export function Botona (props: any) {
+    return (
+       <a className='md:py-2 py-2 md:px-9 px-16 md:text-base text-[22px] mb-8 bg-black hover:bg-[#FFAFBC] text-white font-bold uppercase' target="_blank" href={props.href}>{props.name}</a>
     )
   }

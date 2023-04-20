@@ -1,6 +1,7 @@
 import { Portada, Title } from "./components/Header"
 import { Form } from "./components/Form"
 import Footer from "./components/Footer"
+import { Succes } from "./components/success"
 
 export default function App() {
   return (
@@ -9,6 +10,8 @@ export default function App() {
       <Title />
       <Form />
       <Footer />
+      <hr className="border-4 block border-black w-full my-8" />
+          <Succes></Succes>
     </div>
   )
 }
