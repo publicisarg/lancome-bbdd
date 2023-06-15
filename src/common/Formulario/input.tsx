@@ -1,10 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-export function Input (props:any){
+export function Input(props: any) {
+
+  const [type, setType] = useState('text');
+  const [max, setMax] = useState('');
+
+  useEffect(() => {
+    if (props.type != "datetime-local") {
+      setType(props.type);
+    } else {
+      let currentDate = new Date().toJSON().slice(0, 10);
+      setMax(currentDate);
+    }
+  }, [])
+
+  function handleFocus() {
+    if (props.type == 'datetime-local') {
+      setType('date');
+    }
+  }
+
   return (
-   <input name={props.name} type={props.type} placeholder={props.placeholder} className='uppercase border-b border-black text-xl my-4 p-2 focus:outline-none font-montserrat font-regular placeholder:to-black' />
+    <input onFocus={handleFocus} max={max} name={props.name} className='uppercase border-b border-black text-xl my-4 p-2 focus:outline-none font-montserrat font-regular placeholder:to-black' type={type} placeholder={props.placeholder} required />
   )
 }
+
 export function Checkbox (props:any) {
   return (
     <div>

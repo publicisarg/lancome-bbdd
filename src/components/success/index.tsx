@@ -8,18 +8,24 @@ import { Ups } from '../../common/UI/ups'
 
 export const Succes = () => {
   return (
-    
+
     <div>
-    <div className='flex flex-col justify-center item-center  text-center border border-solid border-black w-9/12 m-auto md:w-[720px] bg-cover'>
-        <Headersuccess/>
-        <Logo />
-        <Gracias/>
-    </div>
-    <div  className='flex flex-col justify-center item-center  text-center border border-solid border-black w-9/12 m-auto md:w-[720px] bg-cover'>
-        <Headerunsuccess/>
-        <LogoError />
-        <Ups/>
-    </div>
+      {false &&
+        <div className="w-full h-screen flex justify-center items-center">
+          <div className='flex flex-col justify-center item-center text-center border border-solid border-black w-9/12 m-auto md:w-[720px] bg-cover'>
+            <Headersuccess />
+            <Logo />
+            <Gracias />
+          </div>
+        </div>}
+      {false &&
+        <div className="w-full h-screen flex justify-center items-center">
+          <div className='flex flex-col justify-center item-center  text-center border border-solid border-black w-9/12 m-auto md:w-[720px] bg-cover'>
+            <Headerunsuccess />
+            <LogoError />
+            <Ups />
+          </div>
+        </div>}
     </div>
   )
 }
