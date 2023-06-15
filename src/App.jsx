@@ -28,7 +28,7 @@ export default function App() {
         </form>
         <hr className="border-4 block border-black w-full my-8" />
       </>}
-      {true && <Succes></Succes>}
+      {false && <Succes></Succes>}
     </div>
   )
 }

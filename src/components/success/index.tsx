@@ -18,7 +18,7 @@ export const Succes = () => {
             <Gracias />
           </div>
         </div>}
-      {false &&
+      {true &&
         <div className="w-full h-screen flex justify-center items-center">
           <div className='flex flex-col justify-center item-center  text-center border border-solid border-black w-9/12 m-auto md:w-[720px] bg-cover'>
             <Headerunsuccess />
