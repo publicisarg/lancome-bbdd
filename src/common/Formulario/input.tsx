@@ -28,7 +28,7 @@ export function Input(props: any) {
 export function Checkbox (props:any) {
   return (
     <div>
-    <input name={props.name} id={props.name} type='checkbox' className='mr-4'/>
+    <input onChange={(e) => props.onChange(e)} required={props.required} name={props.name} id={props.name} type='checkbox' className='mr-4'/>
     <label htmlFor={props.name} className='font-light font-montserrat'>{props.label}</label>
     </div>
   )

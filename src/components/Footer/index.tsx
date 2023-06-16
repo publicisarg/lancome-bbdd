@@ -2,7 +2,7 @@ import React from "react"
 import { Checkbox } from "../../common/Formulario/input"
 import { Boton } from "../../common/Formulario/contenido-form"
 
-export const Footer = () => {
+export const Footer = (props:any) => {
     return (
         <>
         <div className="flex justify-center"> 
@@ -11,7 +11,7 @@ export const Footer = () => {
         </p>
         </div>
         <div className="flex justify-center"> 
-        <Checkbox name="legal" label="Acepto políticas de privacidad"/>
+        <Checkbox required={true} name="legal" label="Acepto políticas de privacidad"/>
         </div>
         <div className="flex text-center"> 
         <p className="text-[13px] mt-3 mb-11 max-w-xl m-auto">
@@ -19,7 +19,7 @@ export const Footer = () => {
             LOS TÉRMINOS Y CONDICIONES DE USO Y NUESTRA POLÍTICA DE COOKIES. COMO TITULAR DE LOS DATOS PERSONALES TENÉS DERECHO A SOLICITAR EL ACCESO, RECTIFICACIÓN Y ACTUALIZACIÓN Y, EN SU CASO, SUPRESIÓN DE LOS MISMOS DE NUESTRA BASE DE DATOS DE CONFORMIDAD CON LA LEY 25.326 DE LA REPÚBLICA ARGENTINA.</p>
         </div>
         <div className='flex justify-center'>
-      <Boton name="ENVIAR" />
+      <Boton disabled={props.disableButton} name="ENVIAR" />
       </div>
         </>
     )

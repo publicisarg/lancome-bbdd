@@ -21,7 +21,7 @@ export function SelectorProvincia(props: any) {
     }
 
     return (
-        <select required placeholder={props.placeholder} name={props.name} onChange={(e) => { props.onChange(e.target.value) }} className="py-2 bg-transparent border-black border-b md:text-xl text-2xl my-4 placeholder-black font-light">
+        <select required placeholder={props.placeholder} name={props.name} onChange={(e) => { props.onChange(e.target.value) }} className="py-2 bg-transparent border-black border-b md:text-xl text-2xl my-4 placeholder-black font-light font-montserrat">
             {buildOptionsJSX()}
         </select>
     )
@@ -67,7 +67,7 @@ export function SelectorLocalidades(props: any) {
     }
 
     return (
-        <select required placeholder={props.placeholder} name={props.name} className="py-2 bg-transparent border-black border-b md:text-xl text-2xl my-4 placeholder-black font-light">
+        <select required placeholder={props.placeholder} name={props.name} className="py-2 bg-transparent border-black border-b md:text-xl text-2xl my-4 placeholder-black font-light font-montserrat">
             {buildOptionsJSX()}
         </select>
     )

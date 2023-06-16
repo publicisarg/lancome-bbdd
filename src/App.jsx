@@ -2,8 +2,38 @@ import { Portada, Title } from "./components/Header"
 import { Form } from "./components/Form"
 import Footer from "./components/Footer"
 import { Succes } from "./components/success"
+import { useState, useEffect } from 'react'
 
 export default function App() {
+
+  const [tratamiento, setTratamiento] = useState(false);
+  const handleTratamiento = () => {
+    setTratamiento(!tratamiento);
+  };
+
+  const [maquillaje, setMaquillaje] = useState(false);
+  const handleMaquillaje = () => {
+    setMaquillaje(!maquillaje);
+  };
+
+  const [checks, setChecks] = useState(0);
+  const handleChecks = (e) => {
+    if (e.target.checked) {
+      setChecks(checks + 1);
+    } else {
+      setChecks(checks - 1);
+    }
+  };
+
+  const [disableButton, setDisableButton] = useState(true);
+  useEffect(() => {
+    if (checks > 2) {
+      setDisableButton(false);
+    } else {
+      setDisableButton(true);
+    }
+  }, [checks])
+
   return (
     <div className="container mx-auto px-4 font-montserat">
       {true && <>
@@ -23,8 +53,8 @@ export default function App() {
           <input type='hidden' name='Source' value='Automatic' />
           <input type='hidden' name='country-code' value='[HELPDESK]' />
           <input type='hidden' name='preferred-locale' value='[HELPDESK]' />
-          <Form />
-          <Footer />
+          <Form handleChecks={handleChecks} handleTratamiento={handleTratamiento} handleMaquillaje={handleMaquillaje} tratamiento={tratamiento} maquillaje={maquillaje}/>
+          <Footer disableButton={disableButton} />
         </form>
         <hr className="border-4 block border-black w-full my-8" />
       </>}
