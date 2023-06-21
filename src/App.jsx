@@ -36,8 +36,6 @@ export default function App() {
 
   const [disableButton, setDisableButton] = useState(true);
   useEffect(() => {
-    console.log(checks);
-    console.log(interests);
     if (checks > 2 && interests > 0) {
       setDisableButton(false);
     } else {
