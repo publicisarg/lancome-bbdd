@@ -71,7 +71,7 @@ export function SelectorLocalidades(props: any) {
                 }
             });
         } else {
-            jsx.push(<option value="">SELECCIONE UNA PROVINCIA PRIMERO</option>)
+            jsx.push(<option key={0} value="">SELECCIONE UNA PROVINCIA PRIMERO</option>)
         }
         return jsx;
     }

@@ -34,14 +34,32 @@ export default function App() {
     }
   };
 
+  const [searching, setSearching] = useState(0);
+  const handleSearching = (e) => {
+    if (e.target.checked) {
+      setSearching(searching + 1);
+    } else {
+      setSearching(searching - 1);
+    }
+  };
+
   const [disableButton, setDisableButton] = useState(true);
   useEffect(() => {
-    if (checks > 2 && interests > 0) {
-      setDisableButton(false);
+    if (tratamiento || maquillaje) {
+      if (checks > 0 && interests > 0 && searching > 0) {
+        setDisableButton(false);
+      } else {
+        setDisableButton(true);
+      }
     } else {
-      setDisableButton(true);
+      if (searching > 0) {
+        setDisableButton(false);
+      } else {
+        setDisableButton(true);
+      }
     }
-  }, [checks, interests])
+    
+  }, [checks, interests, searching])
 
   return (
     <div className="container mx-auto px-4 font-montserat">
@@ -62,7 +80,7 @@ export default function App() {
           <input type='hidden' name='Source' value='Automatic' />
           <input type='hidden' name='country-code' value='[HELPDESK]' />
           <input type='hidden' name='preferred-locale' value='[HELPDESK]' />
-          <Form handleChecks={handleChecks} handleInterests={handleInterests} handleTratamiento={handleTratamiento} handleMaquillaje={handleMaquillaje} tratamiento={tratamiento} maquillaje={maquillaje}/>
+          <Form handleSearching={handleSearching} handleChecks={handleChecks} handleInterests={handleInterests} handleTratamiento={handleTratamiento} handleMaquillaje={handleMaquillaje} tratamiento={tratamiento} maquillaje={maquillaje}/>
           <Footer disableButton={disableButton} />
         </form>
         <hr className="border-4 block border-black w-full my-8" />

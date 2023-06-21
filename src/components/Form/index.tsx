@@ -17,7 +17,7 @@ export const Form = (props: any) => {
         </>
       }
       <Subtitle texto="Estoy buscando:*" />
-      <Buscando />
+      <Buscando handleSearching={props.handleSearching}/>
     </div>
   )
 }

@@ -78,17 +78,17 @@ export const Preocupacion = (props:any) => {
     )
 }
 
-export const Buscando = () => {
+export const Buscando = (props:any) => {
     return (
         <>
             <div className='md:flex'>
                 <div className='flex flex-col w-full md:my-4 mt-4'>
-                    <Checkbox name="Descuentos y beneficios" label="Descuentos y beneficios" />
-                    <Checkbox name="Aprender a usar los productos" label="Aprender a usar los productos" />
+                    <Checkbox onChange={props.handleSearching} name="Descuentos y beneficios" label="Descuentos y beneficios" />
+                    <Checkbox onChange={props.handleSearching} name="Aprender a usar los productos" label="Aprender a usar los productos" />
                 </div>
                 <div className='flex flex-col w-full md:my-4'>
-                    <Checkbox name="Descubrir buenas reseñas" label="Descubrir buenas reseñas" />
-                    <Checkbox name="AVolver a comprar" label="Volver a comprar" />
+                    <Checkbox onChange={props.handleSearching} name="Descubrir buenas reseñas" label="Descubrir buenas reseñas" />
+                    <Checkbox onChange={props.handleSearching} name="AVolver a comprar" label="Volver a comprar" />
                 </div>
             </div>
         </>

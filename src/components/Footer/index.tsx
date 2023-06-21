@@ -3,6 +3,9 @@ import { Checkbox } from "../../common/Formulario/input"
 import { Boton } from "../../common/Formulario/contenido-form"
 
 export const Footer = (props:any) => {
+
+  function dummy() {}
+
     return (
         <>
         <div className="flex justify-center"> 
@@ -11,7 +14,7 @@ export const Footer = (props:any) => {
         </p>
         </div>
         <div className="flex justify-center"> 
-        <Checkbox required={true} name="legal" label="Acepto políticas de privacidad"/>
+        <Checkbox onChange={() => {dummy}} required={true} name="legal" label="Acepto políticas de privacidad"/>
         </div>
         <div className="flex text-center"> 
         <p className="text-[13px] mt-3 mb-11 max-w-xl m-auto">
