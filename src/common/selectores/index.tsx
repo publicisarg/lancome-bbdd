@@ -10,7 +10,7 @@ export function SelectorProvincia(props: any) {
         const jsx: any = [];
         Provincias.forEach((element: any, index: number) => {
             if (element == "Provincia") {
-                jsx.push(<option key={index} value="">{element}</option>);
+                jsx.push(<option key={index} value="">PROVINCIA</option>);
             } else {
                 jsx.push(<option key={index} value={element}>{element}</option>);
             }
@@ -54,14 +54,14 @@ export function SelectorLocalidades(props: any) {
             var localidadesOrdenadas = localidades.sort((a,b) => (a.nombre > b.nombre) ? 1 : -1);
             localidadesOrdenadas.forEach((element: any, index: number) => {
                 var actualData = toTitleCase(element.nombre);
-                if (element == "Provincia") {
-                    jsx.push(<option key={index} value="">{actualData}</option>);
+                if (actualData == "Provincia") {
+                    jsx.push(<option key={index} value="">PROVINCIA</option>);
                 } else {
                     jsx.push(<option key={index} value={actualData}>{actualData}</option>);
                 }
             });
         } else {
-            jsx.push(<option value="">Seleccione una provincia primero</option>)
+            jsx.push(<option value="">SELECCIONE UNA PROVINCIA PRIMERO</option>)
         }
         return jsx;
     }

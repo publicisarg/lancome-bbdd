@@ -11,7 +11,7 @@ export const Form = (props: any) => {
       {(props.tratamiento || props.maquillaje) &&
         <>
           <Subtitle texto="Quisiera saber de productos para:" />
-          <QuisieraSaber maquillaje={props.maquillaje} tratamiento={props.tratamiento} handleChecks={props.handleChecks} />
+          <QuisieraSaber maquillaje={props.maquillaje} tratamiento={props.tratamiento} handleInterests={props.handleInterests} />
           <Subtitle texto="Selecciona tu principal preocupación:*" />
           <Preocupacion maquillaje={props.maquillaje} tratamiento={props.tratamiento} handleChecks={props.handleChecks} />
         </>

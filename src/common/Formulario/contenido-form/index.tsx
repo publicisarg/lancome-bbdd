@@ -8,18 +8,18 @@ export const DatosPersonales = () => {
 
     return (
         <>
-            <div className="grid md:grid-cols-2 grids-cols-1 md:gap-8 gap-0 mt-16">
+            <div className="grid md:grid-cols-2 grids-cols-1 md:gap-8 gap-0 mt-16 mb-12">
                 <div className="grid grid-cols-1">
                     <Input name="first-name" placeholder="Nombre*" type="text" />
                     <Input name="birthday" placeholder="Fecha de nacimiento*" type="datetime-local" />
                     {/*<Input name="provincia" placeholder="Provincia*" type="text"/>*/}
-                    <SelectorProvincia placeholder="Provincia" name="state-code" onChange={setProvincia} />
+                    <SelectorProvincia placeholder="PROVINCIA" name="state-code" onChange={setProvincia} />
                 </div>
 
                 <div className="grid grid-cols-1">
                     <Input name="last-name" placeholder="Apellido*" type="text" />
                     <Input name="email" placeholder="Email*" type="email" />
-                    <SelectorLocalidades name="city" placeholder="Localidad*" provincia={provincia} />
+                    <SelectorLocalidades name="city" placeholder="LOCALIDAD" provincia={provincia} />
                 </div>
             </div>
         </>
@@ -47,10 +47,10 @@ export const QuisieraSaber = (props:any) => {
     return (
         <>
             <div className='flex flex-col w-full my-4'>
-                <Checkbox onChange={props.handleChecks} name="Rostro" label="Rostro" />
-                <Checkbox onChange={props.handleChecks} name="Labios" label="labios" />
-                <Checkbox onChange={props.handleChecks} name="Ojos" label="Ojos" />
-                <Checkbox onChange={props.handleChecks} name="Cuerpo" label="Cuerpo" />
+                <Checkbox onChange={props.handleInterests} name="Rostro" label="Rostro" />
+                <Checkbox onChange={props.handleInterests} name="Labios" label="Labios" />
+                <Checkbox onChange={props.handleInterests} name="Ojos" label="Ojos" />
+                <Checkbox onChange={props.handleInterests} name="Cuerpo" label="Cuerpo" />
 
             </div>
         </>
