@@ -1,8 +1,9 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import municipios from './municipios.json';
 
 export function SelectorProvincia(props: any) {
+
+    const [color, setColor] = useState("text-[#a1a8b4]");
 
     const Provincias = ["Provincia", "Buenos Aires", "Ciudad Autónoma de Buenos Aires", "Catamarca", "Chaco", "Chubut", "Córdoba", "Corrientes", "Entre Ríos", "Formosa", "Jujuy", "La Pampa", "La Rioja", "Mendoza", "Misiones", "Neuquén", "Río Negro", "Salta", "San Juan", "San Luis", "Santa Cruz", "Santa Fe", "Santiago del Estero", "Tierra del Fuego, Antártida e Islas del Atlántico Sur", "Tucumán"];
 
@@ -20,8 +21,17 @@ export function SelectorProvincia(props: any) {
         return jsx;
     }
 
+    function changeColor(value) {
+        if (value != "") {
+            setColor("text-black");
+        } else {
+            setColor("text-[#a1a8b4]");
+        }
+        props.onChange(value);
+    }
+
     return (
-        <select required placeholder={props.placeholder} name={props.name} onChange={(e) => { props.onChange(e.target.value) }} className="py-2 bg-transparent border-black border-b md:text-xl text-2xl my-4 placeholder-black font-light font-montserrat">
+        <select required placeholder={props.placeholder} name={props.name} onChange={(e) => { changeColor(e.target.value) }} className={`${color} py-2 bg-transparent border-black border-b md:text-xl text-2xl my-4 placeholder-black font-montserrat`}>
             {buildOptionsJSX()}
         </select>
     )
@@ -30,6 +40,7 @@ export function SelectorProvincia(props: any) {
 export function SelectorLocalidades(props: any) {
 
     const [localidades, setLocalidades] = useState<any>([]);
+    const [color, setColor] = useState("text-[#a1a8b4]");
 
     useEffect(() => {
         if (props.provincia != "") {
@@ -50,7 +61,6 @@ export function SelectorLocalidades(props: any) {
     function buildOptionsJSX() {
         const jsx: any = [];
         if (localidades != undefined && props.provincia != "") {
-            console.log(localidades);
             var localidadesOrdenadas = localidades.sort((a,b) => (a.nombre > b.nombre) ? 1 : -1);
             localidadesOrdenadas.forEach((element: any, index: number) => {
                 var actualData = toTitleCase(element.nombre);
@@ -66,8 +76,16 @@ export function SelectorLocalidades(props: any) {
         return jsx;
     }
 
+    function changeColor(value) {
+        if (value != "") {
+            setColor("text-black");
+        } else {
+            setColor("text-[#a1a8b4]");
+        }
+    }
+
     return (
-        <select required placeholder={props.placeholder} name={props.name} className="py-2 bg-transparent border-black border-b md:text-xl text-2xl my-4 placeholder-black font-light font-montserrat">
+        <select required onChange={(e) => { changeColor(e.target.value) }} placeholder={props.placeholder} name={props.name} className={`${color} py-2 bg-transparent border-black border-b md:text-xl text-2xl my-4 placeholder-black font-montserrat`}>
             {buildOptionsJSX()}
         </select>
     )
