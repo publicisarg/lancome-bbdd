@@ -25,11 +25,11 @@ export function Input(props: any) {
   )
 }
 
-export function Checkbox (props:any) {
+export function Checkbox(props: any) {
   return (
     <div>
-    <input onChange={(e) => props.onChange(e)} required={props.required} name={props.name} id={props.name} type='checkbox' className='mr-4'/>
-    <label htmlFor={props.name} className='font-light font-montserrat'>{props.label}</label>
+      <input value={props.value} onChange={(e) => props.onChange(e)} required={props.required} name={props.name} id={props.name} type='checkbox' className='mr-4' />
+      <label htmlFor={props.name} className='font-light font-montserrat'>{props.label}</label>
     </div>
   )
 }
