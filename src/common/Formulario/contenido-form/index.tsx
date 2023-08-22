@@ -36,7 +36,7 @@ export const MeInteresaria = (props:any) => {
             <div className='flex flex-col w-full my-4'>
                 <Checkbox onChange={props.handleTratamiento} name="CATEGORY" value="SKIN" label="Tratamiento" />
                 <Checkbox onChange={props.handleMaquillaje} name="CATEGORY" value="MAKE UP" label="Maquillajes" />
-                <Checkbox onChange={dummy} name="PERFUME MOMENT" value="ALL THE TIME" label="Fragancias" />
+                <Checkbox onChange={dummy} name="PERFUME_MOMENT" value="ALL THE TIME" label="Fragancias" />
             </div>
         </>
 
